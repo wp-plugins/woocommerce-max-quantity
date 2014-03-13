@@ -1,12 +1,11 @@
 ﻿=== WooCommerce Max Quantity ===
-Author URI: http://isabelcastillo.com
-Plugin URI: http://isabelcastillo.com/downloads/woocommerce-max-quantity-plugin
 Contributors: isabel104
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=me%40isabelcastillo%2ecom
 Tags: woocommerce, max quantity, cart maximum, max purchase, cart max, cart limit
-Requires at least: 3.4
+Requires at least: 3.7
 Tested up to: 3.8.1
-Stable Tag: 1.1.7
+Stable Tag: 1.1.8
+
 License: GNU Version 2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,19 +14,18 @@ Set a universal limit for the max quantity, per product, that can be added to ca
 == Description ==
 WooCommerce Max Quantity is an extension for [WooCommerce](http://wordpress.org/plugins/woocommerce/) that lets you set a max limit for the number of items that can be added to the cart. It's a universal limit, meaning this limit affects all products in your WooCommerce store. 
 
+**NOTE:** This plugin only works with "Simple" products. **It does NOT work with products that have "variations".**
+
 The limit is per product, not per the entire cart. 
 
 This works for guest buyers, as well as logged-in buyers.
 
 To set the number, go to your WordPress dashboard. Go to WooCommerce -> Settings -> Products tab. Click "Inventory". Scroll down to "Maximum Quantity Limit Per Product". Set your desired limit there.
 
-**Known Issues**
-
-This plugin currently does not support "products with Variations". I may add this support, soon.
 
 **Other Notes**
 
-For more info, see the [FAQ](http://wordpress.org/plugins/woocommerce-max-quantity/faq/) and the [plugin web page](http://isabelcastillo.com/downloads/woocommerce-max-quantity-plugin).
+For more info, see the [FAQ](http://wordpress.org/plugins/woocommerce-max-quantity/faq/).
 
 For support, please use the [Support forum](http://wordpress.org/support/plugin/woocommerce-max-quantity).
 
@@ -42,13 +40,21 @@ Contribute or fork it [on Github](https://github.com/isabelc/Woocommerce-Max-Qua
 
 == Frequently Asked Questions ==
 
-None yet.
+= Why don't you add support for products with variations? =
+
+I don't have the time at the moment to add it with enough options for backwards compatibility for those who do not want this feature. (There are those who do not prefer this feature. For example, if you want to limit sales to 3 T-shirts, regardless of T-shirt size.) I may add this feature in the future, when I get time. You are welcome to hack away [on Github](https://github.com/isabelc/Woocommerce-Max-Quantity).
+
 
 == Screenshots ==
 
 1. The setting at WooCommerce -> Settings -> Inventory tab
 
 == Changelog ==
+
+= 1.1.8 =
+* Fix: now checks for manually-typed quantity because maximum limit was able to be overridden by typing in a number.
+* Fix: a problem in which limit was ignored if product was previously added to cart, then added another item to cart, then re-added this item to cart.
+* Maintenance: Updated description to reflect that this plugin does not yet support products with variations.
 
 = 1.1.6 =
 * Fix: maximum limit was able to be overridden by adding a new instance of the item to cart.
@@ -74,3 +80,7 @@ None yet.
 
 = 1.0 =
 * Initial release.
+
+== Upgrade Notice ==
+= 1.1.8 =
+Fix: they can no longer override limit by manually typing quantity. Other bug also fixed.
