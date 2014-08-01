@@ -2,16 +2,16 @@
 Contributors: isabel104
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=me%40isabelcastillo%2ecom
 Tags: woocommerce, max quantity, cart maximum, max purchase, cart max, cart limit
-Requires at least: 3.7
-Tested up to: 3.9
-Stable Tag: 1.2.0
+Requires at least: 3.8
+Tested up to: 4.0
+Stable Tag: 1.2.1
 License: GNU Version 2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Set a universal limit for the max quantity, per product, that can be added to cart. Does not require customers to log in.
 
 == Description ==
-WooCommerce Max Quantity is an extension for [WooCommerce](http://wordpress.org/plugins/woocommerce/) that lets you set a max limit for the number of items that can be added to the cart. It's a universal limit, meaning this limit affects all products in your WooCommerce store. 
+WooCommerce Max Quantity is an extremely simple extension for [WooCommerce](http://wordpress.org/plugins/woocommerce/) that lets you set a max limit for the number of items that can be added to the cart. It's simple because there is only 1 option (your desired maximum number). It's a universal limit, meaning this limit affects each product in your WooCommerce store.
 
 **NOTE:**
 This plugin only works with "Simple" products. For products that have "variations", you can try [this fork by thekillerdev](https://github.com/thekillerdev/WooCommerce-Max-Quantity) instead, which he modified to work with products with variations.
@@ -54,11 +54,15 @@ I don't have the time at the moment to add it with the proper option to disable 
 
 == Changelog ==
 
+= 1.2.1 =
+* Fix - Did not calculate quantity properly if you UPDATE Quantity on Cart page. This did not let some users DECREASE or INCREASE the quantity while on the cart page.
+* Maintenance - Tested and passed for WordPress 4.0 compatibility.
+
 = 1.2.0 =
-* New: added .pot translation file.
-* New: added translations for French, Hindi, and Spanish languages.
-* New: changed textdomain to plugin slug.
-* Tested and passed for WP 3.9 compatibility.
+* New - Added .pot translation file.
+* New - Added translations for French, Hindi, and Spanish languages.
+* New - Changed textdomain to plugin slug.
+* Maintenance - Tested and passed for WP 3.9 compatibility.
 
 = 1.1.9 =
 * Fix: added _update_cart_validation to avoid manual override on cart update at checkout.
@@ -96,6 +100,10 @@ I don't have the time at the moment to add it with the proper option to disable 
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.2.1 =
+Fix - Did not calculate quantity properly if you UPDATE Quantity on Cart page.
+
 = 1.1.9 = 
 Fix: added _update_cart_validation to avoid manual override on cart update at checkout.
 
